@@ -1,65 +1,92 @@
-📘 Study Planner using Dynamic Programming (0/1 Knapsack)
+🚀 Study Planner Optimization (0/1 Knapsack - Dynamic Programming)
+
+
+
+
+
+
 📌 Overview
 
-This project helps you maximize your exam score based on limited study time.
-It uses the 0/1 Knapsack algorithm to decide which topics to study for the best possible marks.
+This project is a smart study planner that helps students maximize their exam scores under time constraints.
 
-🚀 Problem Statement
+It applies the 0/1 Knapsack algorithm to select the most valuable topics while staying within the available study time.
 
-You are given:
+👉 Instead of randomly studying, this tool gives a data-driven strategy to score higher.
 
-n topics
-Time required for each topic
-Marks you can score from each topic
-Total available study time
+🎯 Key Features
+✅ Optimal topic selection using Dynamic Programming
+✅ Maximizes marks within limited time
+✅ Efficient and scalable solution
+✅ Clean and modular C++ implementation
+🧠 Core Idea
 
-Your goal is to select topics such that:
+Each topic has:
 
-Total time does not exceed available time
-Total marks are maximized
-💡 Approach
+Time required
+Marks (value)
 
-This problem is solved using Dynamic Programming.
+We must choose a subset such that:
 
-We create a 2D table dp[i][t] where:
+Total time ≤ available time
+Total marks is maximum
 
-i = number of topics considered
-t = available time
-Logic:
-If we don’t pick a topic → take previous result
-If we pick a topic → add its marks and reduce time
-🧠 Formula Used
+⚙️ Algorithm Used
+🔹 0/1 Knapsack (Dynamic Programming)
+
+We build a DP table:
+
+dp[i][t] = maximum marks using first i topics within time t
+
+Recurrence:
 dp[i][t] = max(
-    dp[i-1][t],
+    dp[i-1][t], 
     marks[i-1] + dp[i-1][t - time[i-1]]
 )
-🛠️ Technologies Used
-C++
-STL (vector)
+
+🏗️ Project Structure
+📁 Study-Planner
+ ├── main.cpp
+ └── README.md
+
 ▶️ How to Run
-Compile the code:
-g++ program.cpp -o program
-Run the executable:
-./program
-📥 Input Format
-Number of topics
-Time required for each topic
-Marks for each topic
-Total available study time
-📤 Output
-Maximum marks achievable within given time
-📌 Example
-Input:
-Enter number of topics: 3  
-Enter time required: 2 3 4  
-Enter marks: 40 50 60  
-Enter total time: 5
-Output:
-Maximum marks you can achieve: 90
-📊 Time & Space Complexity
-Time Complexity: O(n × totalTime)
-Space Complexity: O(n × totalTime)
-🎯 Use Case
-Exam preparation planning
-Time management optimization
-Resource allocation problems
+Step 1: Compile
+g++ main.cpp -o planner
+
+Step 2: Run
+./planner
+
+📥 Sample Input
+Enter number of topics: 4  
+Time: 1 3 4 5  
+Marks: 10 40 50 70  
+Total Time: 7
+
+📤 Sample Output
+Maximum marks you can achieve: 80
+
+📊 Complexity
+Type	Complexity
+Time Complexity	O(n × T)
+Space Complexity	O(n × T)
+
+🔥 Why This Project Matters
+Demonstrates problem-solving skills
+Shows understanding of Dynamic Programming
+Applies theory to a real-world scenario (exam planning)
+Useful for coding interviews + placements
+
+🚀 Future Enhancements
+🔹 Space optimization using 1D DP
+🔹 Track selected topics (not just marks)
+🔹 Add GUI or web interface
+🔹 Convert into mobile app for students
+
+🎓 Use Cases
+Exam preparation strategy
+Time management systems
+Resource optimization problems
+
+👨‍💻 Author
+
+Harsha Kotha
+B.Tech Student | Aspiring AI/ML Engineer
