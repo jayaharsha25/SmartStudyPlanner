@@ -1,8 +1,12 @@
 🚀 Study Planner Optimization (0/1 Knapsack - Dynamic Programming)
 
-
-
-
+👥 Team Members
+    Name	                                Roll Number
+Kotha Jayaharsha	                       AP24110011649
+Vemavarapu Avinash	                       AP24110011656
+Yelubandi Sai Naga Mahesh	               AP24110011672
+Shikala Naveen	                           AP24110011626
+Balineni Lokesh	                           AP24110011634
 
 
 📌 Overview
@@ -32,27 +36,21 @@ Total marks is maximum
 
 ⚙️ Algorithm Used
 🔹 0/1 Knapsack (Dynamic Programming)
-
-We build a DP table:
-
 dp[i][t] = maximum marks using first i topics within time t
-
-Recurrence:
 dp[i][t] = max(
     dp[i-1][t], 
     marks[i-1] + dp[i-1][t - time[i-1]]
 )
-
 🏗️ Project Structure
 📁 Study-Planner
  ├── main.cpp
  └── README.md
 
 ▶️ How to Run
-Step 1: Compile
+Compile
 g++ main.cpp -o planner
 
-Step 2: Run
+Run
 ./planner
 
 📥 Sample Input
@@ -69,24 +67,20 @@ Type	Complexity
 Time Complexity	O(n × T)
 Space Complexity	O(n × T)
 
+
 🔥 Why This Project Matters
-Demonstrates problem-solving skills
+Demonstrates strong problem-solving skills
 Shows understanding of Dynamic Programming
-Applies theory to a real-world scenario (exam planning)
-Useful for coding interviews + placements
+Applies concepts to a real-world scenario
+Useful for placements and technical interviews
+
 
 🚀 Future Enhancements
 🔹 Space optimization using 1D DP
-🔹 Track selected topics (not just marks)
-🔹 Add GUI or web interface
-🔹 Convert into mobile app for students
+🔹 Track selected topics
+🔹 Add UI / web interface
+🔹 Extend into AI-based planner
 
-🎓 Use Cases
-Exam preparation strategy
-Time management systems
-Resource optimization problems
 
 👨‍💻 Author
-
 Harsha Kotha
-B.Tech Student | Aspiring AI/ML Engineer
